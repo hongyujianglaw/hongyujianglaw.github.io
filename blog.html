@@ -7,14 +7,15 @@
     <title>Hongyu Jiang — Blog</title>
     <style>
       :root {
-        color-scheme: light dark;
-        --text-color: #0f2414;
-        --muted-text: #3c5a3f;
-        --bg-color: #f4fbf6;
+        color-scheme: light;
+        --bg: #edf2ff;
+        --bg-secondary: #f7f4ff;
         --card-bg: #ffffff;
-        --accent: #2f9d69;
-        --border: #dbeee1;
-        font-family: "SF Pro Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --text: #131c34;
+        --muted: #5c6784;
+        --accent: #6b8bff;
+        --border: rgba(19, 28, 52, 0.12);
+        font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
       * {
@@ -23,9 +24,10 @@
 
       body {
         margin: 0;
-        padding: 32px 16px 64px;
-        background: var(--bg-color);
-        color: var(--text-color);
+        padding: 48px 16px 80px;
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 65%, #ffffff 100%);
+        color: var(--text);
       }
 
       .page {
@@ -36,31 +38,31 @@
       .site-nav {
         display: flex;
         justify-content: flex-end;
-        gap: 16px;
-        margin-bottom: 24px;
+        gap: 14px;
+        margin-bottom: 28px;
       }
 
       .site-nav a {
-        color: var(--accent);
+        color: var(--text);
         text-decoration: none;
         font-weight: 600;
-        padding: 10px 20px;
-        border: 1px solid var(--accent);
+        padding: 8px 18px;
         border-radius: 999px;
-        background: rgba(47, 157, 105, 0.08);
-        transition: background 0.2s ease;
+        border: 1px solid transparent;
+        transition: border-color 0.2s ease, color 0.2s ease;
       }
 
       .site-nav a:hover {
-        background: rgba(47, 157, 105, 0.2);
+        border-color: var(--accent);
+        color: var(--accent);
       }
 
       header {
         background: var(--card-bg);
         border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 32px;
-        box-shadow: 0 15px 45px rgba(15, 90, 45, 0.08);
+        border-radius: 28px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(19, 28, 52, 0.08);
         margin-bottom: 40px;
       }
 
@@ -71,9 +73,9 @@
 
       header p {
         margin-top: 12px;
-        color: var(--muted-text);
-        font-size: 1.1rem;
-        line-height: 1.6;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
       }
 
       .article-list {
@@ -85,14 +87,24 @@
       article {
         background: var(--card-bg);
         border: 1px solid var(--border);
-        border-radius: 20px;
+        border-radius: 24px;
         padding: 32px;
-        box-shadow: 0 12px 35px rgba(15, 90, 45, 0.06);
+        box-shadow: 0 20px 40px rgba(19, 28, 52, 0.08);
       }
 
       article h2 {
         margin: 0 0 8px;
         font-size: 1.8rem;
+      }
+
+      article h2 a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      article h2 a:hover {
+        color: var(--accent);
       }
 
       article .meta {
@@ -104,33 +116,32 @@
       }
 
       article p {
-        color: var(--muted-text);
+        color: var(--muted);
         line-height: 1.7;
         font-size: 1.05rem;
         margin: 0 0 16px;
       }
 
-      article ul {
-        margin: 0 0 16px 18px;
-        color: var(--muted-text);
-        line-height: 1.7;
+      .article-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: color 0.2s ease, border-color 0.2s ease;
       }
 
-      article ul li {
-        margin-bottom: 8px;
-      }
-
-      .coming-soon {
-        border-left: 4px solid var(--accent);
-        padding-left: 16px;
-        color: var(--muted-text);
-        font-style: italic;
+      .article-link:hover {
+        color: var(--text);
+        border-color: var(--accent);
       }
 
       footer {
         text-align: center;
         margin-top: 48px;
-        color: var(--muted-text);
+        color: var(--muted);
       }
     </style>
   </head>
@@ -142,38 +153,47 @@
       </nav>
 
       <header>
-        <h1>Working Log &amp; Blog</h1>
+        <h1>Blog</h1>
         <p>
-          Longer-form reflections that extend the quick notes on the home page. These posts document systems thinking, litigation prep, and how
-          earned settlement practices are built in real time.
+          I write about moments that shaped how I understand law in practice.
+
+These posts are based on real experiences — from navigating unfamiliar legal systems,
+to volunteering with advice services, to thinking carefully about where technology helps
+and where it should not.
+
+This blog is not legal advice. It is a record of learning, reflection, and responsibility.
         </p>
       </header>
 
       <section class="article-list">
         <article>
-          <p class="meta">Feature · In progress</p>
-          <h2>Earned Settlement: keeping momentum behind negotiated outcomes</h2>
+          <p class="meta">Case study · March 2025</p>
+          <h2><a href="blog/from-zero.html">From zero to £1,673: learning a legal process as an outsider</a></h2>
           <p>
-            Earned settlement insists that closing language is only the midpoint of client service. The goal is to demonstrate how every concession,
-            warranty, and timetable will be honoured across teams once the documents are signed.
+            How I navigated the UK Deposit Protection Service dispute process from scratch, including the evidence trail, communication strategy, and practical
+            steps that helped recover a £1,673 tenancy deposit.
           </p>
-          <p>
-            In practice, that means exhausting the detail early. I am currently mapping each phase of settlement implementation:
-          </p>
-          <ul>
-            <li>Capturing facts and authority boundaries before offers shift.</li>
-            <li>Translating headline numbers into live cash-flow and risk dashboards.</li>
-            <li>Preparing playbooks so solicitors, counsel, and client stakeholders give the same message under pressure.</li>
-            <li>Monitoring obligations post-signature with check-ins, shared trackers, and escalation routes.</li>
-          </ul>
-          <p>
-            The finished piece will include downloadable templates and debrief prompts. Until then, view this as a working outline and feel free to
-            reach out if you want to compare approaches.
-          </p>
+          <p>This post breaks down each stage—from verifying where the deposit sat to gathering evidence and presenting a concise submission.</p>
+          <a class="article-link" href="blog/from-zero.html">Read the full post →</a>
         </article>
 
-        <article class="coming-soon">
-          Additional essays on litigation craft, pro bono sprints, and process experiments are in draft. New posts will land here shortly.
+        <article>
+          <p class="meta">Reflection · 2025</p>
+          <h2><a href="blog/ai-volunteering.html">What volunteering taught me about using AI responsibly in legal services</a></h2>
+          <p>
+            Lessons from Citizens Advice, Age UK, and the ULTRA Student Ambassador Competition on how AI can support (not replace) human advisers working on
+            life-changing benefit applications.
+          </p>
+          <p>It covers why accessibility matters, the safeguards required, and how a video-first pitch helped tell this story.</p>
+          <a class="article-link" href="blog/ai-volunteering.html">Read the full post →</a>
+        </article>
+
+        <article>
+          <p class="meta">Teamwork · Reflection</p>
+          <h2><a href="blog/race-conversations.html">Knowing When to Speak: Teamwork in Difficult Moments</a></h2>
+          <p>Lessons from A Race for Justice on speaking up without shutting down dialogue when sensitive questions arise mid-project.</p>
+          <p>This piece shares a real scenario from the workshop team and how calm context kept trust intact.</p>
+          <a class="article-link" href="blog/race-conversations.html">Read the full post →</a>
         </article>
       </section>
 

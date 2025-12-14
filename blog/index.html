@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Hongyu Jiang</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f6ff;
+        --text: #131c34;
+        --muted: #5c6784;
+        --accent: #6b8bff;
+        --border: rgba(19, 28, 52, 0.08);
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 48px 16px 80px;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .frame {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      header {
+        margin-bottom: 32px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 5vw, 3.2rem);
+      }
+
+      header p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      section {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        margin-bottom: 20px;
+        box-shadow: 0 15px 35px rgba(19, 28, 52, 0.08);
+      }
+
+      section h2 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+      }
+
+      .selected-posts ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+      }
+
+      .selected-posts li {
+        margin: 0;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .selected-posts strong {
+        display: block;
+        color: var(--text);
+      }
+
+      .archive ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+      }
+
+      .archive li {
+        color: var(--muted);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        margin-top: 32px;
+        text-align: center;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <div class="nav-links">
+        <a href="../index.html">← Back to home</a>
+        <a href="../">GitHub Pages</a>
+      </div>
+
+      <header>
+        <h1>Blog</h1>
+        <p>Notes on learning law in practice, access to justice, and responsibility.</p>
+      </header>
+
+      <section>
+        <h2>About this blog</h2>
+        <p>I write about moments that shaped how I understand law in practice.</p>
+        <p>
+          These posts are based on real experiences — from navigating unfamiliar legal systems, to volunteering with advice services, to thinking carefully about
+          where technology helps and where it should not.
+        </p>
+        <p>This blog is not legal advice. It is a record of learning, reflection, and responsibility.</p>
+      </section>
+
+      <section class="selected-posts">
+        <h2>Selected posts</h2>
+        <ul>
+          <li>
+            <strong><a href="from-zero.html">From zero to £1,673: learning a legal process as an outsider</a></strong>
+            How I learned to navigate the UK deposit protection system from scratch, and what this taught me about evidence, process, and fairness.
+          </li>
+          <li>
+            <strong>What volunteering taught me about using AI responsibly in legal services</strong>
+            Reflections from Citizens Advice and Age UK on where technology helps — and where it must stop.
+          </li>
+          <li>
+            <strong>Knowing When to Speak: Teamwork in Difficult Moments</strong>
+            Reflections from A Race for Justice on speaking up without shutting down sensitive teamwork.
+          </li>
+        </ul>
+      </section>
+
+      <section class="archive">
+        <h2>Archive</h2>
+        <ul>
+          <li>2025 · From zero to £1,673: learning a legal process as an outsider</li>
+          <li>2025 · What volunteering taught me about using AI responsibly in legal services</li>
+          <li>2024 · Knowing When to Speak: Teamwork in Difficult Moments</li>
+        </ul>
+      </section>
+
+      <footer>More writing → <a href="https://hongyujianglaw.github.io/blog">https://hongyujianglaw.github.io/blog</a></footer>
+    </main>
+  </body>
+</html>
