@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hongyu Jiang</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --text-color: #0f2414;
+        --muted-text: #3c5a3f;
+        --bg-color: #f4fbf6;
+        --card-bg: #ffffff;
+        --accent: #2f9d69;
+        --border: #dbeee1;
+        font-family: "SF Pro Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px 16px 64px;
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      .page {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      .site-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .site-nav a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: rgba(47, 157, 105, 0.08);
+        transition: background 0.2s ease;
+      }
+
+      .site-nav a:hover {
+        background: rgba(47, 157, 105, 0.2);
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 15px 45px rgba(15, 90, 45, 0.08);
+      }
+
+      .avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 24px;
+        object-fit: cover;
+        border: 4px solid var(--bg-color);
+        box-shadow: 0 15px 45px rgba(15, 90, 45, 0.12);
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 5vw, 3rem);
+        margin: 0;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        color: var(--muted-text);
+        margin: 8px 0 0;
+      }
+
+      section {
+        margin-top: 40px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(15, 90, 45, 0.05);
+      }
+
+      section h2 {
+        margin: 0 0 16px;
+        font-size: 1.6rem;
+      }
+
+      .about p,
+      .blog p,
+      .contact p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--muted-text);
+        margin: 0 0 16px;
+      }
+
+      .notes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .note-card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px;
+        background: #fcfffd;
+        box-shadow: 0 5px 20px rgba(15, 90, 45, 0.05);
+      }
+
+      .note-card span {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+      }
+
+      .note-card strong {
+        display: block;
+        font-size: 1.05rem;
+        margin: 8px 0 6px;
+      }
+
+      .note-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--muted-text);
+        margin: 0;
+      }
+
+      .contact a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .feature-article {
+        margin-top: 24px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgba(47, 157, 105, 0.05);
+      }
+
+      .feature-article h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 1.35rem;
+        color: var(--text-color);
+      }
+
+      .cv-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .cv-list li {
+        border-left: 3px solid var(--accent);
+        padding-left: 12px;
+        color: var(--muted-text);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted-text);
+        margin-top: 32px;
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: 720px) {
+        header {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .intro {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav">
+        <a href="blog.html">Blog</a>
+        <a href="#cv">CV</a>
+      </nav>
+      <header>
+        <img src="images/HYphoto.jpg" alt="Portrait of Hongyu Jiang" class="avatar" width="140" height="140">
+        <div class="intro">
+          <h1>Hongyu Jiang</h1>
+          <p class="tagline">LLB · LLM · GDL | LPC graduate documenting the path into practice</p>
+        </div>
+      </header>
+
+      <section class="about">
+        <h2>About</h2>
+        <p>
+          I'm a Hull-based law graduate who has recently completed the LPC. My interests sit at the intersection of commercial practice, dispute
+          resolution, and the practical systems that keep client work moving. This site is a quiet log of what I am learning, building, and reading as I
+          transition from study to practice.
+        </p>
+        <p>
+          I believe in clear systems, generous knowledge sharing, and process checklists that leave breathing room for judgment. Expect drafts, field notes,
+          and honest reflections rather than finished essays.
+        </p>
+      </section>
+
+      <section class="blog" id="blog">
+        <h2>Latest Notes</h2>
+        <p>Recent highlights from my working log. Longer posts and archives now live on the dedicated blog page.</p>
+        <p><a href="blog.html">Read the full blog →</a></p>
+        <article class="feature-article">
+          <h3>Earned Settlement: keeping momentum behind negotiated outcomes</h3>
+          <p>
+            Earned settlement is the discipline of proving that negotiated deals do more than end a dispute—they create a defensible runway for both
+            sides to move forward. My current focus is on documenting each concession, translating headline terms into practical workflows, and
+            safeguarding the relationship between counsel and client once the paper is signed.
+          </p>
+          <p>
+            This article-in-progress maps the lifecycle of earned settlement: rapid fact capture, financial modelling of options, drafting playbooks that
+            align teams on messaging, and post-settlement monitoring so obligations never drift. Expect templates, checklists, and reflections on how
+            technology can keep trust intact throughout the process.
+          </p>
+        </article>
+        <ul class="notes">
+          <li class="note-card">
+            <span>Learning Log</span>
+            <strong>LPC litigation toolkit</strong>
+            <p>Building templates for case analysis, drafting checklists, and hearing prep.</p>
+          </li>
+          <li class="note-card">
+            <span>Project</span>
+            <strong>Pro bono research sprint</strong>
+            <p>Supporting a small nonprofit with compliance notes and guidance on safeguarding.</p>
+          </li>
+          <li class="note-card">
+            <span>Reading</span>
+            <strong>Habitual practice</strong>
+            <p>Summaries of books and podcasts that sharpen focus and client empathy.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="cv" id="cv">
+        <h2>CV Snapshot</h2>
+        <p>
+          A concise overview of academic credentials and experience. A full CV is available on request and will live here shortly.
+        </p>
+        <ul class="cv-list">
+          <li>LPC graduate with distinctions across litigation and business law modules.</li>
+          <li>LLM in international finance; research assistant experience supporting cross-border matters.</li>
+          <li>Hands-on pro bono casework spanning client interviews, drafting, and settlement preparation.</li>
+        </ul>
+      </section>
+
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>If any of this resonates or you would like to collaborate, reach out any time.</p>
+        <div class="contact-info">
+          <a href="mailto:jhyedinburgh@gmail.com">jhyedinburgh@gmail.com</a>
+          <a href="https://www.linkedin.com/in/hongyu-jiang-53645a201/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+
+      <footer>© <script>document.write(new Date().getFullYear())</script> Hongyu Jiang</footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hongyu Jiang — Blog</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --text-color: #0f2414;
+        --muted-text: #3c5a3f;
+        --bg-color: #f4fbf6;
+        --card-bg: #ffffff;
+        --accent: #2f9d69;
+        --border: #dbeee1;
+        font-family: "SF Pro Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px 16px 64px;
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      .page {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      .site-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .site-nav a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: rgba(47, 157, 105, 0.08);
+        transition: background 0.2s ease;
+      }
+
+      .site-nav a:hover {
+        background: rgba(47, 157, 105, 0.2);
+      }
+
+      header {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 15px 45px rgba(15, 90, 45, 0.08);
+        margin-bottom: 40px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4.5vw, 2.8rem);
+      }
+
+      header p {
+        margin-top: 12px;
+        color: var(--muted-text);
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .article-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      article {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 12px 35px rgba(15, 90, 45, 0.06);
+      }
+
+      article h2 {
+        margin: 0 0 8px;
+        font-size: 1.8rem;
+      }
+
+      article .meta {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        margin-bottom: 20px;
+      }
+
+      article p {
+        color: var(--muted-text);
+        line-height: 1.7;
+        font-size: 1.05rem;
+        margin: 0 0 16px;
+      }
+
+      article ul {
+        margin: 0 0 16px 18px;
+        color: var(--muted-text);
+        line-height: 1.7;
+      }
+
+      article ul li {
+        margin-bottom: 8px;
+      }
+
+      .coming-soon {
+        border-left: 4px solid var(--accent);
+        padding-left: 16px;
+        color: var(--muted-text);
+        font-style: italic;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 48px;
+        color: var(--muted-text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#cv">CV</a>
+      </nav>
+
+      <header>
+        <h1>Working Log &amp; Blog</h1>
+        <p>
+          Longer-form reflections that extend the quick notes on the home page. These posts document systems thinking, litigation prep, and how
+          earned settlement practices are built in real time.
+        </p>
+      </header>
+
+      <section class="article-list">
+        <article>
+          <p class="meta">Feature · In progress</p>
+          <h2>Earned Settlement: keeping momentum behind negotiated outcomes</h2>
+          <p>
+            Earned settlement insists that closing language is only the midpoint of client service. The goal is to demonstrate how every concession,
+            warranty, and timetable will be honoured across teams once the documents are signed.
+          </p>
+          <p>
+            In practice, that means exhausting the detail early. I am currently mapping each phase of settlement implementation:
+          </p>
+          <ul>
+            <li>Capturing facts and authority boundaries before offers shift.</li>
+            <li>Translating headline numbers into live cash-flow and risk dashboards.</li>
+            <li>Preparing playbooks so solicitors, counsel, and client stakeholders give the same message under pressure.</li>
+            <li>Monitoring obligations post-signature with check-ins, shared trackers, and escalation routes.</li>
+          </ul>
+          <p>
+            The finished piece will include downloadable templates and debrief prompts. Until then, view this as a working outline and feel free to
+            reach out if you want to compare approaches.
+          </p>
+        </article>
+
+        <article class="coming-soon">
+          Additional essays on litigation craft, pro bono sprints, and process experiments are in draft. New posts will land here shortly.
+        </article>
+      </section>
+
+      <footer>© <script>document.write(new Date().getFullYear())</script> Hongyu Jiang</footer>
+    </main>
+  </body>
+</html>
